@@ -1,0 +1,31 @@
+body{
+    background-color: #111B24;
+    font-family: "Motiva Sans", Sans-serif;    
+    color: white;
+}
+
+.imagem{
+    width: 260px;
+    height: auto;
+    margin: 10px;
+}
+
+.texto-label{
+    font-weight: 12px;
+    font-weight: bold;
+}
+
+div:hover{
+    background: #2982AA;        
+}
+
+.green-button{
+    width: 100px;
+    background-color: rgb(37, 180, 18);
+    border-color: rgb(37, 180, 18);
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+    margin-left: 180px;
+    width: 85px;
+    height: 35px;
+}

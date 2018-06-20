@@ -1,0 +1,44 @@
+body{
+    background: #234564;
+}
+
+input{
+    background-color: rgba( 0, 0, 0, 0.2 );
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px #45556c;
+    width: 450px;
+    padding: 5px;
+    margin: 4px;
+}
+
+a{
+    padding: 130px;
+    color: #fff;
+    font-family: "Motiva Sans", Sans-serif;
+}
+
+.login-box{
+    width: 580px;
+    height: 260px;
+    border: none;
+    background: #163A50;
+    font-family: "Motiva Sans", Sans-serif;
+    color: white;
+    padding: 10px;
+    margin: 50px;
+    display: inherit;
+}
+
+.login-input{
+    background-color: rgba( 0, 0, 0, 0.2 );
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px #45556c;
+    width: 500px;
+    height: 130px;
+    padding: 15px 0px 5px 20px;
+    margin: 25px;
+}

@@ -1,0 +1,42 @@
+body{
+    background-color: #163952;
+}
+.vitrineJogo{
+    max-width: 290px;
+    min-height: 430px;
+    border: rgb(202, 206, 209) solid 1px;
+    background: #1E6990;
+    font-family: "Motiva Sans", Sans-serif;    
+    color: white;
+}
+
+.imagem{
+    width: 260px;
+    height: auto;
+    margin: 10px;
+}
+
+.texto-label{
+    font-weight: 12px;
+    font-weight: bold;
+}
+
+div:hover{
+    background: #2982AA;        
+}
+
+.green-button{
+    width: 100px;
+    background-color: #30bf20;
+    border-color: #30bf20;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+    margin-left: 180px;
+    border-color: black;
+    width: 85px;
+    height: 35px;
+}
+
+button:hover{
+    background: #309125
+}
