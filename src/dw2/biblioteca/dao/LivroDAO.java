@@ -25,7 +25,7 @@ public class LivroDAO {
 								"values (?, ?, ?)";
 			ps = conn.prepareStatement(sql);
 			
-			ps.setString(1, livro.getNomeLivro());
+			ps.setString(1, livro.gettituloLivro());
 			ps.setInt(2, livro.getEdicao());
 			ps.setString(3, livro.getGenero());
 			ps.executeUpdate();
@@ -42,7 +42,7 @@ public class LivroDAO {
 		ResultSet rs = null;
 		
 		try {
-			String sql = "select * from livro where status = false";
+			String sql = "select * from LIVRO";
 			conn = ConnectionBibliotecaFactory.getConnection();
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -50,10 +50,10 @@ public class LivroDAO {
 			ArrayList<Livro> listaLivrosDisponiveis =
 					new ArrayList<Livro>();
 			while(rs.next()) {
-				Livro livro = new Livro(rs.getString("NOME_LIVRO"), 
+				Livro livro = new Livro(rs.getString("TITULO_LIVRO"), 
 						                       rs.getInt("EDICAO"),
 						                       rs.getString("GENERO"));
-				livro.setId(rs.getInt("ID"));
+				//livro.setId(rs.getInt("ID"));
 				listaLivrosDisponiveis.add(livro);
 			}
 			
@@ -81,7 +81,7 @@ public class LivroDAO {
 			
 			Livro livro = null;
 			if(rs.next()) {
-				livro = new Livro(rs.getString("NOME_LIVRO"), 
+				livro = new Livro(rs.getString("TITULO_LIVRO"), 
 	                                          rs.getInt("EDICAO"),
 	                                        rs.getString("GENERO"));
 				livro.setId(rs.getInt("ID"));

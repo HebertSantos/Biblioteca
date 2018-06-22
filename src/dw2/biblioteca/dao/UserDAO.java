@@ -20,7 +20,7 @@ public class UserDAO {
 		
 		try {
 			String sql =
-					"select * from public.usuario " +
+					"select * from usuario " +
 							"where email=? and password=?";
 			conn = ConnectionBibliotecaFactory.getConnection();
 			ps = conn.prepareStatement(sql);
@@ -56,7 +56,7 @@ public class UserDAO {
 		
 		try {
 			String sql =
-					"select * from public.usuario " +
+					"select * from usuario " +
 							"where email=?";
 			conn = ConnectionBibliotecaFactory.getConnection();
 			ps = conn.prepareStatement(sql);

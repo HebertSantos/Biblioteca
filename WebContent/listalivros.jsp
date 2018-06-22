@@ -9,26 +9,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" type="text/css" href="css/vitrine.css">
+<link rel="stylesheet" type="text/css" href="css/listalivros.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
                        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" 
                        crossorigin="anonymous">
-<title>Game Store</title>
+<title>Biblioteca Online</title>
 </head>
 <body>
 		
 	<h1>Bem vindo(a), ${ user.nome }</h1>	
-	<h1>Lista de Produtos</h1>
+	<h1>Lista de Livros</h1>
 	<button>
 		<i class="fas fa-shopping-cart"></i>
-		<a href="#">Ver Carrinho</a>
+		<a href="#">Ver Livros Disponiveis</a>
 	</button>	
 	<c:forEach var="livro" items="${listaLivros}">
 	<div class="listaLivros" id="listaLivros">
         <img src="images/livro.png" alt="" class="imagem">
         <ul>
             <li class="texto-label" id="livrosDisponiveis">Nome Livro:
-                <span class="text-desc !important"name="nomeLivro">${livro.nomeLivro}</span>
+                <span class="text-desc !important"name="nomeLivro">${livro.tituloLivro}</span>
             </li>
             <li class="texto-label" name="edicao" id="edicaoLivro">
                     <span name="edicao">R$: ${livro.edicao}</span>
@@ -36,20 +36,17 @@
             <li class="texto-label" name="genero" id="generoLivro">
                 <span name="genero">${livro.genero}</span>
             </li>
-            <li class="texto-label" id="generoJogo">
-                <span name="generoJogo">${produto.genero}</span>
-            </li>
         </ul>
         <c:choose>
-			<c:when test="${Usuario.isUsuarioPossuiJogo(produto.id, listaJogosUsuario)}">
-      				J� Adiquirido	
+			<c:when test="${User.isUserPossuiLivro(produto.id, listaLivrosUsuarios)}">
+      				Livro Adiquirido	
   				</c:when>    
 		    <c:otherwise>
 		        <button class="green-button" name="comprarJogo">
-		        	<a href=ControleServlet?comando=ComprarProduto&idProduto=${produto.id}>Compar<i class="fas fa-money-bill-alt"></i></a>
+		        	<a href=ControleServlet?comando=EmprestarLivros&idLivro=${livro.id}>Emprestar<i class="fas fa-money-bill-alt"></i></a>
 		        </button>
 		        <button class="green-button" name="addJogo">
-					<a href=ControleServlet?comando=AdicionarProduto&idProduto=${produto.id}>Adicionar ao Carrinho<i class="fas fa-cart-plus"></i></a>
+					<a href=ControleServlet?comando=CarrinhoDeLivros&idLivro=${livro.id}>Adicionar ao Conjunto Emprestado<i class="fas fa-cart-plus"></i></a>
 				</button>
 		    </c:otherwise>								
 		</c:choose>        

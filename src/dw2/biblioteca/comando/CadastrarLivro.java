@@ -16,8 +16,13 @@ public class CadastrarLivro implements Comando {
 		ArrayList<Livro> listaDeLivros;				
 		
 		String nomeLivro = request.getParameter("nomeLivro");
-		Integer edicao = Integer.parseInt("edicao");
+		String sEdicao = request.getParameter("edicao");
 		String genero = request.getParameter("genero");
+		
+		
+		int edicao = Integer.parseInt(sEdicao);
+		
+		
 		
 		Livro novoLivro = new Livro(nomeLivro, edicao, genero);
 		LivroDAO dbLivro = new LivroDAO();

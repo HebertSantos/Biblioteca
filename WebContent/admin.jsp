@@ -32,14 +32,14 @@
 		<tr>
 			<td>ID</td>
 			<td>Nome</td>
-			<td>Editora</td>
+			<td>Edicao</td>
 			<td>Genero</td>
 		</tr>
 		<c:forEach var="livro" items="${listaLivros}">
 		<tr>
 			<td>${livro.id}</td>
 			<td>${livro.nomeLivro}</td>
-			<td>${livro.editora}</td>
+			<td>${livro.edicao}</td>
 			<td>${livro.genero}</td>
 			<td>
 				<a href="http://localhost:8080/Biblioteca/login.jsp"><i class="far fa-edit" style="color:lightblue;text-shadow:2px 2px 4px"></i></a>

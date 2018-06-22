@@ -20,7 +20,7 @@ public class CadastrarUsuario implements Comando {
 		
 		String nome = request.getParameter("nome");
 		String email = request.getParameter("email");
-		String password = request.getParameter("passoword");
+		String password = request.getParameter("password");
 		String password2 = request.getParameter("password2");		
 		
 		UserDAO userDAO = new UserDAO();

@@ -3,12 +3,13 @@ package dw2.biblioteca.modelo;
 public class Livro {
 		
 		private int id;
-		private String nomeLivro;
+		private String tituloLivro;
 		private int edicao;
 		private String genero;	
 
-		public Livro(String nomeLivro, int edicao, String genero) {		
-			this.nomeLivro = nomeLivro;
+		public Livro(String tituloLivro, int edicao, String genero) {		
+			this.tituloLivro = tituloLivro;
+			this.edicao = edicao;
 			this.genero = genero;
 		}
 		
@@ -20,11 +21,11 @@ public class Livro {
 			this.id = id;
 		}
 		
-		public String getNomeLivro() {
-			return nomeLivro;
+		public String gettituloLivro() {
+			return tituloLivro;
 		}
-		public void setNomeLivro(String nome) {
-			this.nomeLivro = nome;
+		public void settituloLivro(String tituloLivro) {
+			this.tituloLivro = tituloLivro;
 		}	
 		public int getEdicao() {
 			return edicao;

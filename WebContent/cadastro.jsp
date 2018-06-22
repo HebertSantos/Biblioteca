@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" type="text/css" href="css/cadastro-usuario.css">
+<link rel="stylesheet" type="text/css" href="css/cadastro.css">
 <title>Game Store</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
 		</form>
         <div>
             <span>
-                <a href="http://localhost:8080/GameStore/login.jsp">Voltar para o Login</a>                
+                <a href="http://localhost:8080/Biblioteca/login.jsp">Voltar para o Login</a>                
             </span>
         </div>
     </div>

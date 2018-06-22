@@ -38,6 +38,7 @@ public class ControleServlet extends HttpServlet {
 			request.getRequestDispatcher(destino).forward(request, response);
 		} 
 		catch (Exception e) {
+			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 	}
